@@ -28,7 +28,7 @@
 ### 🔧 **Шаги установки**  
 1. Склонируйте проект на свой компьютер:  
    ```bash  
-   git clone https://github.com/stepa323/FinTracker.git
+   git clone https://github.com/stephanvoytov/FinTracker.git
    cd fintracker  
    ```  
 
@@ -81,10 +81,6 @@ zope.interface==7.1.1
 - **`db.sqlite`** — база данных SQLite для хранения транзакций.  
 - **`ui`** — интерфейс, созданный на PyQt6.  
 
----
-
-## ⚖ **Лицензия**  
-Проект распространяется под лицензией **MIT**. Вы можете свободно использовать, модифицировать и распространять его.  
 
 ---
 
