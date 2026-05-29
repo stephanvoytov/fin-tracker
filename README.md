@@ -28,7 +28,7 @@
 ### 🔧 **Шаги установки**  
 1. Склонируйте проект на свой компьютер:  
    ```bash  
-   git clone https://github.com/stephanvoytov/FinTracker.git
+   git clone https://github.com/stephanvoytov/fin-tracker.git
    cd fintracker  
    ```  
 
