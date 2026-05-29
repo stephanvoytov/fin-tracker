@@ -349,16 +349,14 @@ class MainWindow(QMainWindow):
                         img_data = file.read()
 
                     sql = """INSERT INTO transactions (date, amount, incomes_id, description, is_expense, image_path, image_data)
-                                                VALUES (?, ?, (SELECT id FROM expenses WHERE name = ?), ?, ?, ?, ?)"""
+                                                VALUES (?, ?, (SELECT id FROM incomes WHERE name = ?), ?, ?, ?, ?)"""
                     cursor = self.connection.cursor()
                     cursor.execute(sql, (values[1], values[0], values[2], values[3], 0, image_path, img_data))
                     self.connection.commit()
 
                 else:
                     sql = """INSERT INTO transactions (date, amount, incomes_id, description, is_expense)
-                                                VALUES (?, ?, (SELECT id FROM incomes WHERE name = ?), ?, ?)"""
-                    cursor = self.connection.cursor()
-                    cursor.execute(sql, (values[1], values[0], values[2], values[3], 1))
+                                                VALUES (?, ?, (SELECT id $10))
                     self.connection.commit()
             except ValueError:
                 self.error(f"Не удалось записать данные: неправильная сумма")
